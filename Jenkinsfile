@@ -101,9 +101,9 @@ def PyExe(pyfilename){
 // run a python file
 	try{
 		if (isUnix()) {
-			sh "/Users/arnonbrouner/PycharmProjects/fourthPart/venv/bin/python ${pyfilename} "
+			sh "python ${pyfilename} "
 		} else {
-			sh "/Users/arnonbrouner/PycharmProjects/fourthPart/venv/bin/python ${pyfilename} "
+			sh "python ${pyfilename} "
 		}
 	} catch (Throwable e) {
 		echo "Caught in PyExe for ${pyfilename}, ${e.toString()}"
@@ -116,9 +116,9 @@ def PyExeBgrnd(pyfilename){
 // run a python file
 	try{
 		if (isUnix()) {
-			sh "nohup /Users/arnonbrouner/PycharmProjects/fourthPart/venv/bin/python ${pyfilename} &"
+			sh "nohup python ${pyfilename} &"
 		} else {
-			sh "nohup /Users/arnonbrouner/PycharmProjects/fourthPart/venv/bin/python ${pyfilename} &"
+			sh "nohup python ${pyfilename} &"
 		}
 	} catch (Throwable e) {
 		echo "Caught in PyExeBgrnd for ${pyfilename}, ${e.toString()}"
