@@ -1,7 +1,7 @@
 import requests
 
 def testbe():
-    res = requests.get('http://localhost:5000/users/1')
+    res = requests.get('http://localhost:5004/users/1')
     if res.ok:
         print(res.json())
     else:
