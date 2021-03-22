@@ -20,7 +20,7 @@ pipeline {
 		}
 		stage('run rest_app step') {
 			steps {
-				sh 'nohup python3 rest_app.py'
+				sh 'nohup python3 rest_app.py &'
 			}
 		}
 		stage('run backend testing step') {
