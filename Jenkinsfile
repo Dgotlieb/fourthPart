@@ -33,16 +33,16 @@ pipeline {
 				sh 'python3 clean_environment.py'
 			}
 		}
-	    stage('build and push image') {
-            steps {
-                script {
-                    dockerImage = docker.build registry + ':$BUILD_NUMBER'
-                    docker.withRegistry('', registryCredential) {
-                    dockerImage.push()
-                    }
-                }
-            }
-         }
+	   // stage('build and push image') {
+           // steps {
+            //    script {
+             //       dockerImage = docker.build registry + ':$BUILD_NUMBER'
+              //      docker.withRegistry('', registryCredential) {
+               //     dockerImage.push()
+                //    }
+              //  }
+          //  }
+       //  }
          stage('Create the image version into the env file') {
 			steps {
 				script {
