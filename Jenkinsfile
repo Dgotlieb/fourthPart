@@ -101,9 +101,9 @@ def PyExe(pyfilename){
 // run a python file
 	try{
 		if (isUnix()) {
-			sh "python ${pyfilename} "
+			sh "python3 ${pyfilename} "
 		} else {
-			sh "python ${pyfilename} "
+			sh "python3 ${pyfilename} "
 		}
 	} catch (Throwable e) {
 		echo "Caught in PyExe for ${pyfilename}, ${e.toString()}"
@@ -116,9 +116,9 @@ def PyExeBgrnd(pyfilename){
 // run a python file
 	try{
 		if (isUnix()) {
-			sh "nohup python ${pyfilename} &"
+			sh "nohup python3 ${pyfilename} &"
 		} else {
-			sh "nohup python ${pyfilename} &"
+			sh "nohup python3 ${pyfilename} &"
 		}
 	} catch (Throwable e) {
 		echo "Caught in PyExeBgrnd for ${pyfilename}, ${e.toString()}"
