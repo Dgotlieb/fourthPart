@@ -68,7 +68,7 @@ pipeline {
 	    always {
 	        script {
 	            sh "docker-compose down"
-                sh "docker rmi $registry:$BUILD_NUMBER"
+                //sh "docker rmi $registry:$BUILD_NUMBER"
             }
         }
  	}
